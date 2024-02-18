@@ -2,7 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import classNames from 'classnames';
 import Dropdown from '../Dropdown';
+import { RiMenuFill, RiCloseFill } from "react-icons/ri";
 // Image and
 import Cagri from '../../app/assets/image/cagri-merkezi.png'
 // Data
@@ -11,6 +13,8 @@ import { SocialMedia } from '@/app/data/social-media';
 import { Number } from '@/app/data/menu';
 
 function Header() {
+
+    const [openMenu, setOpenMenu] = useState(false);
 
     return (
         <div>
@@ -34,7 +38,88 @@ function Header() {
                 </div>
             </div>
             <div id='header-bottom' className='h-[80px]'>
-                <div className='custom-container mx-auto'>
+                <div className='flex md:hidden p-4'>
+                    <div className='w-full flex justify-end items-center text-xl'>
+                        <button
+                            onClick={() => setOpenMenu(true)}
+                            className={classNames('bg-white text-black p-2 border rounded', {
+                                'hidden': openMenu,
+                                'block': !openMenu
+                            })}><RiMenuFill /></button></div>
+                    <div className={classNames('bg-white w-1/2 absolute  z-[100] h-full py-4 px-2 transition-all duration-200 ease-out', {
+                        'hidden left-[-100]': !openMenu,
+                        'block left-0': openMenu
+                    })}>
+                        <div className='w-full flex items-center justify-end text-xl'>
+                            <button onClick={() => setOpenMenu(false)} className='border rounded p-1'><RiCloseFill /></button>
+                        </div>
+                        <ul className='grid grid-cols-1 gap-4'>
+                            <li>
+                                <p>Vakfımız</p>
+                                <ul className='grid grid-cols-1 gap-2 mt-1'>
+                                    <li>
+                                        <Link href='/vakfimiz/vakfimiz-hakkinda' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Vakfımız Hakkında</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/vakfimiz/vakif-baskanlari' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Vakıf Başkanları</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/vakfimiz/vakif-senedi' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Vakıf Senedi</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/vakfimiz/mutevelli-heyeti' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Mütevelli Heyeti</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/vakfimiz/yonetim-kurulu' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Yönetim Kurulu</Link>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Burs</p>
+                                <ul className='grid grid-cols-1 gap-2 mt-1'>
+                                    <li>
+                                        <Link href='/burs/burs-ve-odul-yonetmeligi' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Burs ve Ödül Yönetmeliği</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/burs/burs-basvurusu-yap' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Burs Başvurusu Yap</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/burs/burs-sonuclari' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Burs Sonuçları</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/burs/bagis-yapmak-istiyorum' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Bağış Yapmak İstiyorum</Link>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Faaliyetlerimiz</p>
+                                <ul className='grid grid-cols-1 gap-2 mt-1'>
+                                    <li>
+                                        <Link href='/faaliyetlerimiz/faaliyet-raporu' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Faaliyet Raporu</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/faaliyetlerimiz/bursiyerlerimiz' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Bursiyerlerimiz</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/faaliyetlerimiz/mezunlarimiz' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Mezunlarımız</Link>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Galeri</p>
+                                <ul className='grid grid-cols-1 gap-2 mt-1'>
+                                    <li>
+                                        <Link href='/galeri/fotograf-galeri' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Fotoğraf Galerisi</Link>
+                                    </li>
+                                    <li>
+                                        <Link href='/galeri/video-galeri' className='w-full align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Video Galerisi</Link>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className='custom-container mx-auto hidden md:block'>
                     <ul className='flex gap-4 h-full items-center'>
                         <li className='h-full'><div><Image src={LogoImage.image.src} width={100} height={100} /></div></li>
                         <li className='h-full flex items-center text-lg'><Link href='/' className=''>Ana Sayfa</Link> </li>

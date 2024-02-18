@@ -65,7 +65,7 @@ const Poppins = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={Poppins.className}>
+      <body className={`${Poppins.className} overflow-x-hidden`}>
         <Header />
         {children}
         <Footer />
