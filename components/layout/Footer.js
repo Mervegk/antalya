@@ -26,7 +26,7 @@ function Footer() {
                     <div>
                         <div className='text-center mb-2'>
                             <h3 className='text-2xl font-bold'>Adres</h3>
-                            <p className='text-[#888888] text-xl'>{Address.address}</p>
+                            <p className='text-thirdcolor text-xl'>{Address.address}</p>
                         </div>
                         <div className='text-center'>
                             <h3 className='text-2xl font-bold'>E-posta</h3>

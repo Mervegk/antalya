@@ -4,6 +4,7 @@ import HeroImg from '../../app/assets/image/pexels-david-bartus-389724.jpg';
 import BursBsvr from '../assets/image/burs-basvurusu.jpg';
 import BursSnc from '../assets/image/basvuru-sonucu.jpg';
 import Bagis from '../assets/image/bagis-yapmak-istiyorum.jpg';
+import Glr from '../assets/image/pexels-fauxels-3184357.jpg';
 
 export const LogoImage = {
     image: Logo
@@ -26,4 +27,8 @@ export const BursSonucImg = {
 
 export const BagisYap = {
     image: Bagis
+}
+
+export const Galeri = {
+    image: Glr
 }

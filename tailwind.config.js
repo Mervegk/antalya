@@ -14,7 +14,10 @@ module.exports = {
       },
     },
     colors: {
-      primary: '#FABC3D'
+      maincolor: '#FABC3D',
+      secondcolor: '#0A74B3',
+      thirdcolor: '#888888',
+      white: '#fff'
     }
   },
   plugins: [],
