@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { RiCalendarLine } from "react-icons/ri";
-import { HeroImage } from "./data/images";
+import { HeroImage, BursBasvuruImg, BursSonucImg, BagisYap } from "./data/images";
 import Illust1 from '../app/assets/svg/illust1.svg';
 import Illust2 from '../app/assets/svg/illus2.svg';
 import { Announcment } from "./data/announcment";
@@ -25,24 +26,49 @@ export default function Home() {
           <Image src={Illust2} width={450} alt="illustrations" className="xl:w-[450px] lg:w-[350px] md:w-[250px] md:block hidden " />
         </div>
       </div>
-      <div id="announcement" className="grid grid-cols-1 md:grid-cols-2 gap-4 px-2">
-        <div className="announcement-left flex items-center justify-end">
-          <div className="w-1/2 mb-8">
-            <h4 className="text-white text-3xl md:text-4xl font-medium">Duymak<br />İstediklerin</h4>
+      <div className="custom-container mx-auto">
+        <div id="announcement" className="grid grid-cols-1 md:grid-cols-2 gap-4 px-2">
+          <div className="announcement-left flex items-center justify-end">
+            <div className="w-1/2 mb-8">
+              <h4 className="text-white text-3xl md:text-4xl font-medium">Duymak<br />İstediklerin</h4>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="secondary-bg p-4 rounded-lg flex flex-col justify-between">
+              <p className="text-white/50 flex gap-2 items-center"><RiCalendarLine /><span>Tarih</span></p>
+              <h4 className="text-white text-xl">Başlık</h4>
+              <p className="text-white text-lg">İçerik</p>
+              <button className="button">Devamını Oku</button>
+            </div>
+            <div className="secondary-bg p-4 rounded-lg flex flex-col justify-between">
+              <p className="text-white/50 flex gap-2 items-center"><RiCalendarLine /><span>Tarih</span></p>
+              <h4 className="text-white text-xl">Başlık</h4>
+              <p className="text-white text-lg">İçerik</p>
+              <button className="button">Devamını Oku</button>
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          <div className="secondary-bg p-4 rounded-lg flex flex-col justify-between">
-            <p className="text-white/50 flex gap-2 items-center"><RiCalendarLine /><span>Tarih</span></p>
-            <h4 className="text-white text-xl">Başlık</h4>
-            <p className="text-white text-lg">İçerik</p>
-            <button className="button">Devamını Oku</button>
+        <div id="burs-bagis" className="flex flex-col gap-4 mt-12">
+          <div className="flex max-md:flex-col gap-4">
+            <div><Link href="/burs/burs-basvurusu-yap"><img src={BursBasvuruImg.image.src} alt="burs-basvuru" /></Link></div>
+            <div><Link href="/burs/burs-sonuclari"><img src={BursSonucImg.image.src} alt="burs-sonuc" /></Link></div>
           </div>
-          <div className="secondary-bg p-4 rounded-lg flex flex-col justify-between">
-            <p className="text-white/50 flex gap-2 items-center"><RiCalendarLine /><span>Tarih</span></p>
-            <h4 className="text-white text-xl">Başlık</h4>
-            <p className="text-white text-lg">İçerik</p>
-            <button className="button">Devamını Oku</button>
+          <div><Link href="/burs/bagis-yapmak-istiyorum"><img src={BagisYap.image.src} alt="bagis" /></Link></div>
+        </div>
+        <div id="years" className="flex max-md:flex-col gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div></div>
+            <div></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h5></h5>
+                <h3></h3>
+              </div>
+              <div></div>
+            </div>
+            <div></div>
           </div>
         </div>
       </div>
