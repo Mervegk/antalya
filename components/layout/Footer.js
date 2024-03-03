@@ -10,10 +10,10 @@ function Footer() {
     };
     let currentYear = new Date().getFullYear();
     return (
-        <div className='bg-contain bg-bottom bg-no-repeat p-4 relative flex flex-col justify-between max-h-[24rem] min-h-[24rem] mt-8' style={footerBg} >
+        <div className='bg-contain bg-bottom bg-no-repeat relative flex flex-col justify-between max-h-[24rem] min-h-[24rem] mt-8 p-4 max-lg:pb-0' style={footerBg} >
             <div id='footer-top' className='container mx-auto'>
                 <div className='grid grid-cols-[20%_50%_30%] gap-4 items-center justify-center text-lg'>
-                    <div><Image src={LogoImage.image.src} alt='Logo' width={200} height={200} /></div>
+                    <div><img src={LogoImage.image.src} alt='Logo' className='max-md:w-24 md:w-28 lg:w-[200px]' /></div>
                     <div className='w-full'>
                         <ul className='flex gap-8 list-disc'>
                             {

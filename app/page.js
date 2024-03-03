@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Cooperate from "@/components/homepage/Cooperate";
 import { RiCalendarLine, RiFolderImageLine, RiFolderVideoLine } from "react-icons/ri";
 import { HeroImage, BursBasvuruImg, BursSonucImg, BagisYap, Galeri } from "./data/images";
 import Illust1 from '../app/assets/svg/illust1.svg';
 import Illust2 from '../app/assets/svg/illus2.svg';
+import Positive from '../app/assets/svg/positive.svg';
 import { Announcment } from "./data/announcment";
 
 export default function Home() {
@@ -22,8 +24,8 @@ export default function Home() {
           <p className="text-base md:text-xl font-medium">Kapının kulu çünkü batarya kutusu dışarı çıktılar düşünüyor cezbelendi biber. Hesap makinesi umut layıkıyla.</p>
           <p className="mt-4 text-sm md:text-base">Sıradanlıktan Uzattı</p>
         </div>
-        <div className="absolute md:right-[-30px] xl:right-0 xl:bottom-[-130px]">
-          <Image src={Illust2} width={450} alt="illustrations" className="xl:w-[450px] lg:w-[350px] md:w-[250px] md:block hidden " />
+        <div className="absolute right-0 xl:bottom-[-130px]">
+          <Image src={Illust2} width={200} alt="illustrations" className="xl:w-[450px] lg:w-[350px] md:w-[230px] md:block hidden " />
         </div>
       </div>
       <div className="custom-container mx-auto">
@@ -57,7 +59,7 @@ export default function Home() {
         </div>
       </div>
       <div className="container mx-auto mt-16">
-        <div id="years" className="grid grid-cols-1 md:grid-cols-2: xl:grid-cols-4 gap-4">
+        <div id="years" className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 p-4">
           <div>
             <h5 className="text-maincolor font-semibold text-4xl text-center">Masa Göze Çarpan</h5>
             <h3 className="text-secondcolor text-9xl font-black text-center">100<br />YIL</h3>
@@ -66,12 +68,28 @@ export default function Home() {
             <p className="text-thirdcolor text-lg md:text-[26px] align-middle">Gazete çünkü ötekinden dolayı filmini mi sıradanlıktan göze çarpan lakin layıkıyla cesurca yaptı salladı. Otobüs bilgiyasayarı balıkhaneye Adana&apos;ya öyle ki gazete ona</p>
           </div>
           <div className="foto-galeri max-md:h-64 relative inline-block w-full">
-            <img src={Galeri.image.src} alt="foto" className="w-full h-full object-cover" />
-            <div className="absolute top-0 left-0 h-full w-full bg-secondcolor/90 z-10 flex items-center justify-center">
-              <h3 className="text-white flex items-center justify-center gap-4 text-5xl font-semibold"><RiFolderImageLine className="text-8xl" />Foto<br />Galeri</h3>
-            </div>
+            <Link href='/galeri/fotograf-galeri'>
+              <div className="h-40">
+                <img src={Galeri.image.src} alt="foto" className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute top-0 left-0 h-full w-full bg-secondcolor/90 z-10 flex items-center justify-center">
+                <h3 className="text-white flex items-center justify-center gap-4 text-5xl font-semibold"><RiFolderImageLine className="text-8xl" />Foto<br />Galeri</h3>
+              </div>
+            </Link>
           </div>
-          <div></div>
+          <div className="foto-galeri max-md:h-64 relative inline-block w-full">
+            <Link href='/galeri/video-galeri'>
+              <div className="h-40">
+                <img src={Galeri.image.src} alt="foto" className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute top-0 left-0 h-full w-full bg-maincolor/90 z-10 flex items-center justify-center">
+                <h3 className="text-white flex items-center justify-center gap-4 text-5xl font-semibold"><RiFolderVideoLine className="text-8xl" />Video<br />Galeri</h3>
+              </div>
+            </Link>
+          </div>
+        </div>
+        <div id="slider">
+          <Cooperate />
         </div>
       </div>
     </main>

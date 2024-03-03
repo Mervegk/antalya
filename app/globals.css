@@ -87,10 +87,14 @@ body {
   height: 382px;
 }
 
-.foto-galeri {
-  /*   background: url('./assets/image/pexels-fauxels-3184357.jpg') no-repeat center, linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(3, 80, 210, 1) 35%, rgba(0, 212, 255, 1) 100%);
- */
+/*  SLİCK SLİDER START */
+
+.slick-prev:before,
+.slick-next:before {
+  color: #FABC3D !important;
 }
+
+/*  SLİCK SLİDER END */
 
 @media (min-width: 1400px) {
   .custom-container {

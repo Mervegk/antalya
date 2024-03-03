@@ -32,3 +32,4 @@ export const BagisYap = {
 export const Galeri = {
     image: Glr
 }
+
