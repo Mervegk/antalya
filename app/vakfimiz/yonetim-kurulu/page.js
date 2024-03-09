@@ -27,7 +27,7 @@ function Page() {
     ];
 
     return (
-        <div className='min-h-[calc(100vh-130px)]'>
+        <div className='min-h-[calc(100vh-545px)]'>
             <InsideHero items={items} pageTitle="Yönetim Kurulu" />
             <div className='custom-container mx-auto bg-white rounded-[10px] pt-20 px-5 md:px-16 pb-[60px] -mt-[50px] box-shadow'>
                 <h1 className='text-title text-[40px] sm:text-[50px] text-center font-semibold'>{data?.title}</h1>
