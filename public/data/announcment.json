@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "title": "Başlık 1",
+            "content": "Gördüm ama sıradanlıktan bilgiyasayarı yazın kalemi dışarı çıktılar sıla ona doğru layıkıyla.",
+            "created_date": "2024-04-02"
+        },
+        {
+            "id": 2,
+            "title": "Başlık 2",
+            "content": "Bilgiyasayarı karşıdakine layıkıyla adresini sinema ve. Anlamsız filmini mi gülüyorum türemiş sıfat yapacakmış balıkhaneye sevindi lambadaki telefonu mıknatıslı okuma sayfası lakin mutlu oldular.",
+            "created_date": "2020-12-12"
+        },
+        {
+            "id": 3,
+            "title": "Başlık 3",
+            "content": "Çünkü mutlu oldular gülüyorum göze çarpan ekşili çorba gitti gitti tv lakin domates.",
+            "created_date": "2021-02-03"
+        },
+        {
+            "id": 4,
+            "title": "Başlık 4",
+            "content": "Bilgiyasayarı karşıdakine layıkıyla adresini sinema ve.",
+            "created_date": "2023-06-09"
+        },
+        {
+            "id": 5,
+            "title": "Başlık 5",
+            "content": " Domates anlamsız sandalye un değirmeni ışık dağılımı ötekinden dolayı ekşili çorba şafak çakıl sandalye. Bilgisayarı bilgisayarı otobüs cesurca yaptı sıradanlıktan gördüm teldeki hesap makinesi sandalye masaya doğru ışık dağılımı ama koşuyorlar. ",
+            "created_date": "2024-09-23"
+        }
+    ]
+}

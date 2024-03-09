@@ -1,5 +1,5 @@
 import React from 'react'
-import { Announcment } from '@/app/data/announcment';
+import { Announcment } from '@/public/data/announcment';
 
 async function getPosts(id) {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
