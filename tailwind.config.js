@@ -19,7 +19,7 @@ module.exports = {
       maincolor: '#FABC3D',
       secondcolor: '#0A74B3',
       thirdcolor: '#888888',
-      white: '#fff'
+      title: '#FBB529'
     }
   },
   plugins: [],

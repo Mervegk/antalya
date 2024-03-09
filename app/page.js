@@ -95,7 +95,7 @@ export default function Home() {
           <Slide images={sliderImg} />
         </div>
       </div>
-      <div id="ad" className="bg-[#F3F5F7] mt-20 p-8">
+      <div id="ad" className="bg-[#F3F5F7] my-20 p-8">
         {
           adImage.map((i) => <a key={i} href="#" className="flex justify-center items-center">
             <div><img src={i.url} alt={i.name} className="max-w-[760px] xl:w-[760px] md:w-[650px] w-[450px] object-cover" /></div>
