@@ -1,0 +1,14 @@
+{
+    "data": [
+        {
+            "id": 0,
+            "logo": "../images/data/genetic-data.svg",
+            "info": ""
+        },
+        {
+            "id": 1,
+            "logo": "../images/data/genetic-data.png",
+            "info": ""
+        }
+    ]
+}

@@ -28,8 +28,8 @@ function Header() {
                         <div>
                             <ul className='flex gap-2 items-center justify-end align-middle h-full'>
                                 {
-                                    SocialMedia.map((i) => {
-                                        return <li key={i} className='hover:text-red-700'><a href={i.url} target='_blank' className='text-2xl'>{i.icon}</a></li>
+                                    SocialMedia.map((i, index) => {
+                                        return <li key={index} className='hover:text-red-700'><a href={i.url} target='_blank' className='text-2xl'>{i.icon}</a></li>
                                     })
                                 }
                             </ul>
@@ -121,7 +121,7 @@ function Header() {
                 </div>
                 <div className='custom-container mx-auto hidden md:block'>
                     <ul className='flex gap-4 h-full items-center'>
-                        <li className='h-full'><div><Image src={LogoImage.image.src} width={100} height={100} /></div></li>
+                        <li className='h-full'><div><Image src={LogoImage.image.src} width={100} height={100} alt='' /></div></li>
                         <li className='h-full flex items-center text-lg'><Link href='/' className=''>Ana Sayfa</Link> </li>
                         <li className='h-full'>
                             <Dropdown title='Vakfımız'>
