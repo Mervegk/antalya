@@ -8,5 +8,5 @@ Moment.js
 
 React Slick
 
-Icons were used from svgrepo.com
-Images were used from freepik.com and pexels.com
+Icons were taken from svgrepo.com
+Images were taken from freepik.com and pexels.com
