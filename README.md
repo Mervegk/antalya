@@ -10,3 +10,4 @@ React Slick
 
 Icons were taken from svgrepo.com
 Images were taken from freepik.com and pexels.com
+Dummy datas were taken from nedirnedemek.com/araclar/turkce-lorem-ipsum and random.org

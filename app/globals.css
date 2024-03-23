@@ -4,7 +4,7 @@
 
 
 :root {
-  --prim-color: #FABC3D;
+  --primary-color: #FABC3D;
   --secondary-color: #123075;
 }
 
@@ -15,14 +15,6 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  .primary-bg {
-    background: var(--prim-color);
-  }
-
-  .secondary-bg {
-    background: var(--secondary-color);
   }
 
   .button {
@@ -36,6 +28,13 @@
 
   .button:hover {
     background-color: #0350d2;
+  }
+
+  .flex-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 }
 
@@ -109,6 +108,103 @@ body {
 }
 
 /*  SLİCK SLİDER END */
+
+.radio-field {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* FORM START */
+
+.form-input {
+  background: white;
+  outline: 1px solid transparent;
+  border-radius: 5px;
+  height: 50px;
+  padding: 10px;
+  /* flex-grow: 1; */
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .3);
+  transition: all .23s linear;
+}
+
+.form-input:focus-visible {
+  outline: 1px solid var(--secondary-color);
+  box-shadow: 0px 0px 5px 2px rgba(10, 116, 179, .5);
+}
+
+/* styles/CustomSelect.module.css */
+.custom-select {
+  position: relative;
+}
+
+.custom-select-elected {
+  cursor: pointer;
+}
+
+.custom-select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 10;
+  width: 100%;
+}
+
+.custom-select-options div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.custom-select-options div:hover {
+  background-color: #f0f0f0;
+}
+
+
+#radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#radio-group label {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+  font-size: 17px;
+  text-align: center;
+  font-weight: medium;
+  background: #888;
+  /* box-shadow: inset 0 2px 0px rgba(255, 255, 255, 0.25),
+  inset 0 -2px 0px rgba(0, 0, 0, 0.18); */
+  transition: 0.3s;
+  min-width: 65px;
+  transition: all 150ms linear;
+}
+
+#radio-group label:has(input:checked) {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: inset 1px 1px 0px rgba(136, 136, 136, 0.3),
+    inset -1px -1px 0px rgba(255, 255, 255, 0.25);
+  /*
+  border: dotted 5px coral;
+  box-shadow: none;
+*/
+}
+
+#radio-group input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+/* FORM END */
 
 @media (min-width: 1400px) {
   .custom-container {

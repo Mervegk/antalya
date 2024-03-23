@@ -31,20 +31,20 @@ export default function Announcment() {
             </div>
             <div className="grid grid-cols-2 gap-4">
                 {
-                    sortedData.slice(0, 2).map((i) => <div key={i.id} className="secondary-bg p-4 rounded-lg flex flex-col justify-around">
+                    sortedData.slice(0, 2).map((i) => <div key={i.id} className="bg-blue p-4 rounded-lg flex flex-col justify-around">
                         <p className="text-white/50 flex gap-2 items-center"><RiCalendarLine /><span>{moment(i.created_date).format('DD MMMM YYYY')}</span></p>
                         <h4 className="text-white text-base xl:text-xl">{i.title}</h4>
                         <p className="text-white text-base xl:text-lg">{i.content.substring(0, 50) + '...'}</p>
                         <Link href={`/duyurular/${i.id}`} className="button">Devamını Oku</Link>
                     </div>)
                 }
-                {/*  <div className="secondary-bg p-4 rounded-lg flex flex-col justify-between">
+                {/*  <div className="bg-blue p-4 rounded-lg flex flex-col justify-between">
                     <p className="text-white/50 flex gap-2 items-center"><RiCalendarLine /><span>Tarih</span></p>
                     <h4 className="text-white text-xl">Başlık</h4>
                     <p className="text-white text-lg">İçerik</p>
                     <button className="button">Devamını Oku</button>
                 </div>
-                <div className="secondary-bg p-4 rounded-lg flex flex-col justify-between">
+                <div className="bg-blue p-4 rounded-lg flex flex-col justify-between">
                     <p className="text-white/50 flex gap-2 items-center"><RiCalendarLine /><span>Tarih</span></p>
                     <h4 className="text-white text-xl">Başlık</h4>
                     <p className="text-white text-lg">İçerik</p>

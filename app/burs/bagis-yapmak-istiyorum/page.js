@@ -37,8 +37,6 @@ function Page() {
                             </div>
                             <div dangerouslySetInnerHTML={{ __html: i.info }} className='text-center text-base md:text-xl text-thirdcolor'></div>
                         </div>
-
-
                     )
                 })
             }

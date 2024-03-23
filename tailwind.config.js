@@ -18,7 +18,8 @@ module.exports = {
     },
     colors: {
       ...colors,
-      maincolor: '#FABC3D',
+      maincolor: 'var(--primary-color)',
+      blue: 'var(--secondary-color)',
       secondcolor: '#0A74B3',
       thirdcolor: '#888888',
       title: '#FBB529'

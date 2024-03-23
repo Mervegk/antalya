@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <div id="hero-section" className="h-44 md:h-80 lg:h-[550px] bg-cover bg-no-repeat bg-center" style={heroBg}></div>
-      <div className="my-0 md:my-16 lg:my-32 primary-bg py-6 px-7 relative flex justify-center">
+      <div className="my-0 md:my-16 lg:my-32 bg-maincolor py-6 px-7 relative flex justify-center">
         <div className="absolute md:left-[-20px] xl:left-0 bottom-[-20px] xl:bottom-[-140px]">
           <Image src={Illust1} width={450} alt="illustrations" className="xl:w-[450px] lg:w-[350px] md:w-[250px] md:block hidden " />
         </div>
