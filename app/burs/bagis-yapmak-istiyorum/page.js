@@ -28,20 +28,20 @@ function Page() {
     ];
     return (
         <PageLayout items={items} crumbPageTitle="Bağış Yapmak İstiyorum">
-            {/*  {
+            {
                 data?.map((i) => {
                     return (
-                        <div key={i.id}>
-                            <div>
-                                <img src={i.logo} alt="" />
+                        <div key={i.id} className='flex flex-col justify-center items-center gap-2 mb-4'>
+                            <div className=''>
+                                <img src={i.logo} alt="" className='max-w-44' />
                             </div>
-                            <div>{i.info}</div>
+                            <div dangerouslySetInnerHTML={{ __html: i.info }} className='text-center text-base md:text-xl text-thirdcolor'></div>
                         </div>
 
 
                     )
                 })
-            } */}
+            }
 
         </PageLayout>
     )

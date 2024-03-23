@@ -3,12 +3,12 @@
         {
             "id": 0,
             "logo": "../images/data/genetic-data.svg",
-            "info": ""
+            "info": "<p><span style='font-weight: bold;'>Hesap Adı:</span> Ötekinden Dolayı Sunflower</p><br/><p><p><span style='font-weight: bold;'>Banka Adı:</span> Gül Gidecekmiş</p><br/><p><span style='font-weight: bold;'>Şube:</span> Kapının Kulu 0871</p><br/><p><span style='font-weight: bold;'>IBAN:</span> ŞĞ26 20329 232588 969058 144294</p>"
         },
         {
             "id": 1,
-            "logo": "../images/data/genetic-data.png",
-            "info": ""
+            "logo": "../images/data/genetic-algorithm.png",
+            "info": "<p><span style='font-weight: bold;'>Hesap Adı:</span> Eve Doğru Çakıl Gül</p><br/><p><p><span style='font-weight: bold;'>Banka Adı:</span> Genetik Algoritma</p><br/><p><span style='font-weight: bold;'>Şube:</span>  Beğendim Işık</p><br/><p><span style='font-weight: bold;'>IBAN:</span> ŞĞ26 915261 67983 991153 74261</p>"
         }
     ]
 }
