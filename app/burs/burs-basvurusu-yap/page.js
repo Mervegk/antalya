@@ -5,9 +5,6 @@ import Form from '@/components/Form';
 
 function Page() {
 
-    const bursDate = '2024-03-23';
-    const currentDate = new Date().toISOString().split('T')[0];
-
     let bursFormuGoster = false;
     const items = [
         {
@@ -19,6 +16,7 @@ function Page() {
             link: "/burs/burs-basvurusu-yap"
         }
     ];
+
     return (
         <PageLayout items={items} crumbPageTitle="Burs Başvurusu Yap" pageTitle={bursFormuGoster == true ? "Burs Başvuru Formu" : "Burs başvuruları sona erdi. İlginiz için teşekkür ederiz."}>
             {
