@@ -30,6 +30,19 @@
     background-color: #0350d2;
   }
 
+  .button-main {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    transition: all .2s ease-in-out;
+  }
+
+  .button-main:hover {
+    background-color: #faac3d;
+  }
+
   .flex-class {
     display: flex;
     justify-content: center;
@@ -116,6 +129,11 @@ body {
 }
 
 /* FORM START */
+.label {
+  color: black;
+  padding: 0 5px 0 5px;
+  margin-bottom: 2px;
+}
 
 .form-input {
   background: white;
@@ -133,7 +151,15 @@ body {
   box-shadow: 0px 0px 5px 2px rgba(10, 116, 179, .5);
 }
 
-/* styles/CustomSelect.module.css */
+.checkbox input[type="checkbox" i] {
+  width: 15px;
+  height: 15px;
+}
+
+.checkbox input[type="checkbox"]:checked {
+  accent-color: var(--primary-color);
+}
+
 .custom-select {
   position: relative;
 }
@@ -161,6 +187,16 @@ body {
   background-color: #f0f0f0;
 }
 
+.custom-select-options div:first-child:hover {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.custom-select-options div:last-child:hover {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 
 #radio-group {
   display: flex;
@@ -179,8 +215,6 @@ body {
   text-align: center;
   font-weight: medium;
   background: #888;
-  /* box-shadow: inset 0 2px 0px rgba(255, 255, 255, 0.25),
-  inset 0 -2px 0px rgba(0, 0, 0, 0.18); */
   transition: 0.3s;
   min-width: 65px;
   transition: all 150ms linear;
@@ -191,10 +225,6 @@ body {
   color: white;
   box-shadow: inset 1px 1px 0px rgba(136, 136, 136, 0.3),
     inset -1px -1px 0px rgba(255, 255, 255, 0.25);
-  /*
-  border: dotted 5px coral;
-  box-shadow: none;
-*/
 }
 
 #radio-group input {

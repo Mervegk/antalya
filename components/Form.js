@@ -1,11 +1,34 @@
-import React, { useState } from 'react'
-import { RiAddFill } from "react-icons/ri";
+import React, { useState, useEffect } from 'react'
+import { RiAddFill, RiArrowDropDownLine } from "react-icons/ri";
 import classNames from 'classnames';
+import { SocialMedia } from '@/app/data/social-media';
 
 export default function Form() {
+    const [display, setDisplay] = useState(false);
+    const [burs, setBurs] = useState('');
+    const [schoolCity, setSchoolCity] = useState('');
     const [image, setImage] = useState();
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
+    const [fcChecked, setFcChecked] = useState(false);
+    const [igChecked, setIgChecked] = useState(false);
+
+    const onRadioTrue = (e) => {
+        const { name, value } = e.target
+        if (name == 'burs') {
+            setBurs(value);
+        } else if (name == 'schoolCity') {
+            setSchoolCity(value);
+        }
+
+    };
+    useEffect(() => {
+        if (burs === '1' && schoolCity === '1') {
+            setDisplay(true);
+        } else {
+            setDisplay(false);
+        }
+    }, [burs, schoolCity]);
 
     const toggleOpen = () => setIsOpen(!isOpen);
 
@@ -32,11 +55,11 @@ export default function Form() {
             options: [
                 {
                     label: "Evet",
-                    value: 1
+                    value: '1'
                 },
                 {
                     label: "Hayır",
-                    value: 0
+                    value: '0'
                 }
             ]
         },
@@ -46,11 +69,11 @@ export default function Form() {
             options: [
                 {
                     label: "Evet",
-                    value: 1
+                    value: '1'
                 },
                 {
                     label: "Hayır",
-                    value: 0
+                    value: '0'
                 }
             ]
         }
@@ -112,62 +135,113 @@ export default function Form() {
             <div className='my-10'>
                 {
                     radioInputs.slice(0, 2).map((i, index) => <fieldset key={index} className='text-center mb-2' id='radio-group'>
-                        <p>{i.label}</p>
+                        <p className='label'>{i.label}</p>
                         <div className='radio-field'>
                             {
-                                i.options.map((item, insideIndex) => <label key={insideIndex}><input type="radio" name={i.name} value={item.value} />{item.label}</label>)
+                                i.options.map((item, insideIndex) => <label key={insideIndex}><input type="radio" name={i.name} value={item.value} onChange={onRadioTrue} />{item.label}</label>)
                             }
                         </div>
                     </fieldset>)
                 }
             </div>
-            <div className='flex flex-col gap-8 w-full'>
-                <div className='flex justify-center'>
-                    <label className='w-44 h-44 flex items-center justify-center border p-1 rounded'>
-                        {
-                            image ? <img src={image} alt='' className='w-full h-full object-cover' /> : <RiAddFill />
-                        }
-                        <input className='hidden w-full h-full' type="file" onChange={handleChange} accept='.png, .jpg, .jpeg, .webp' />
-                    </label>
-                </div>
-                <div className='flex-class flex-col'>
-                    <div className='flex-class flex-wrap'>
-                        {
-                            textInputs.map((i, index) =>
-                                <div key={index} className='flex-grow flex flex-col'>
-                                    <label>{i.label}</label>
-                                    <input type='text' name={i.name} className='form-input' />
-                                </div>)
-                        }
-                    </div>
-
-                    <div className='flex-class w-full'>
-                        <div className="custom-select flex-grow form-input w-1/3">
-                            <div onClick={toggleOpen} className="custom-select-selected">
-                                {selectedOption || 'Kan Grubu'}
+            {
+                display == true ?
+                    <div className='flex flex-col gap-8 w-full'>
+                        <div className='text-center'>
+                            <label className='label'>Fotoğraf Seç</label>
+                            <div className='flex justify-center mt-2'>
+                                <label className='w-56 h-56 flex items-center justify-center border p-1 rounded'>
+                                    {
+                                        image ? <img src={image} alt='' className='w-full h-full object-cover' /> : <RiAddFill />
+                                    }
+                                    <input className='hidden w-full h-full' type="file" onChange={handleChange} accept='.png, .jpg, .jpeg, .webp' />
+                                </label>
                             </div>
-                            {isOpen && (
-                                <div className="custom-select-options">
-                                    {options.map((option, index) => (
-                                        <div key={index} onClick={() => handleSelect(option.name)}>
-                                            {option.name}
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-                            <select className='hidden' name='bloodType'><option value={selectedOption}></option></select>
                         </div>
-                        <div className='flex flex-grow w-1/3'>
-                            <input type='checkbox' className='form-input' />
-                        </div>
-                        <div className='flex flex-grow w-1/3'>
-                            <textarea className='form-input'></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        <div className='flex-class flex-col'>
+                            <div className='flex-class flex-wrap'>
+                                {
+                                    textInputs.map((i, index) =>
+                                        <div key={index} className='flex-grow flex flex-col'>
+                                            <label className='label'>{i.label}</label>
+                                            <input type='text' name={i.name} className='form-input' />
+                                        </div>)
+                                }
+                            </div>
 
-            <button type='submit' className='bg-yellow-500 p-4'>Gönder</button>
+                            <div className='flex-class  w-full'>
+                                <div className='flex flex-col flex-grow w-1/3'>
+                                    <label className='label'>Kan Grubu</label>
+                                    <div className="custom-select form-input flex items-center">
+                                        <div onClick={toggleOpen} className="custom-select-selected  flex justify-between w-full">
+                                            <span className={classNames({ 'text-black': selectedOption, 'text-thirdcolor': !selectedOption })}>{selectedOption || 'Kan Grubu'}</span><span><RiArrowDropDownLine className={classNames('text-xl transition-all duration-150 ease-linear', { 'rotate-180': isOpen })} /></span>
+                                        </div>
+                                        {isOpen && (
+                                            <div className="custom-select-options form-input !p-0 !h-auto">
+                                                {options.map((option, index) => (
+                                                    <div key={index} onClick={() => handleSelect(option.name)}>
+                                                        {option.name}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+                                        <select className='hidden' name='bloodType'><option value={selectedOption}></option></select>
+                                    </div>
+                                </div>
+                                <div className='flex flex-col flex-grow w-1/3'>
+                                    <label>Kayıt Tarihi</label>
+                                    <input type='date' name='date' className='form-input' />
+                                </div>
+                            </div>
+                            <div className='flex flex-col w-full'>
+                                <label className='label'>Düşünceleriniz</label>
+                                <textarea className='form-input !h-32'></textarea>
+                            </div>
+                            <div className='w-full flex flex-col gap-4'>
+                                <div className='flex flex-col items-center w-full'>
+                                    <label className='mb-2 label'>Hangi Sosyal Medya Adreslerini Kullanıyorsunuz?</label>
+                                    <div className='flex gap-4 checkbox'>
+                                        <div className='flex items-center gap-2'>
+                                            <label className='label'>Facebook</label>
+                                            <input name='fc' type='checkbox' className=' w-auto' onChange={(e) => {
+                                                if (e.target.checked === true) {
+                                                    setFcChecked(true);
+                                                } else if (e.target.checked === false) {
+                                                    setFcChecked(false);
+                                                }
+                                            }
+                                            } />
+                                        </div>
+                                        <div className='flex items-center gap-2'>
+                                            <label className='label'>Instagram</label>
+                                            <input name='ig' type='checkbox' className=' w-auto' onChange={(e) => {
+                                                if (e.target.checked === true) {
+                                                    setIgChecked(true);
+                                                } else if (e.target.checked === false) {
+                                                    setIgChecked(false);
+                                                }
+                                            }
+                                            } />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='flex items-center gap-4'>
+                                    <div className={classNames('flex-grow flex-col w-1/2', { 'flex': fcChecked, 'hidden': !fcChecked })}>
+                                        <label className='label'>Facebook</label>
+                                        <input type='text' name='facebook' className='form-input' />
+                                    </div>
+                                    <div className={classNames('flex-grow flex-col w-1/2', { 'flex': igChecked, 'hidden': !igChecked })}>
+                                        <label className='label'>Instagram</label>
+                                        <input type='text' name='instagram' className='form-input' />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='flex justify-end items-center w-full'>
+                            <button type='submit' className='button-main'>Gönder</button>
+                        </div>
+                    </div> : null
+            }
         </form>
     )
 }

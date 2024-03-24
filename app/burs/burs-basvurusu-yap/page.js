@@ -4,20 +4,11 @@ import PageLayout from '@/components/layout/PageLayout';
 import Form from '@/components/Form';
 
 function Page() {
-    const [image, setImage] = useState();
 
-    function handleChange(e) {
-        console.log(e.target.files);
-        setImage(URL.createObjectURL(e.target.files[0]));
-    }
+    const bursDate = '2024-03-23';
+    const currentDate = new Date().toISOString().split('T')[0];
 
-    function onSubmit(e) {
-        e.preventDefault();
-        var formData = new FormData(e.target);
-        const formValues = Object.fromEntries(formData);
-        console.log('form values', formValues)
-    }
-
+    let bursFormuGoster = false;
     const items = [
         {
             name: "Burs",
@@ -29,8 +20,10 @@ function Page() {
         }
     ];
     return (
-        <PageLayout items={items} crumbPageTitle="Burs Başvurusu Yap">
-            <Form />
+        <PageLayout items={items} crumbPageTitle="Burs Başvurusu Yap" pageTitle={bursFormuGoster == true ? "Burs Başvuru Formu" : "Burs başvuruları sona erdi. İlginiz için teşekkür ederiz."}>
+            {
+                bursFormuGoster == true ? <Form /> : null
+            }
         </PageLayout>
     )
 }
