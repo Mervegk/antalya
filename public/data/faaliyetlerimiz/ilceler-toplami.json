@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "district": "Bundan",
+            "number_of_people": "1"
+        },
+        {
+            "district": "Teldeki",
+            "number_of_people": "15"
+        },
+        {
+            "district": "Gülüyorumsılaadresini",
+            "number_of_people": "20"
+        },
+        {
+            "district": "Balıkhaneye",
+            "number_of_people": "29"
+        },
+        {
+            "district": "Telefonucesurca",
+            "number_of_people": "12"
+        },
+        {
+            "district": "Yapacakmış",
+            "number_of_people": "17"
+        },
+        {
+            "district": "LambadakiMıknatıslı",
+            "number_of_people": "11"
+        }
+    ]
+}

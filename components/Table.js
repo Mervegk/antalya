@@ -6,8 +6,6 @@ import Loading from '@/public/svg/loading.svg';
 
 export default function Table({ data, columnsData, className }) {
     const [pending, setPending] = useState(true);
-    const [currentPage, setCurrentPage] = useState(1);
-    const PageSize = 10; // Assuming 10 items per page
 
     useEffect(() => {
         const timeout = setTimeout(() => {
@@ -34,10 +32,10 @@ export default function Table({ data, columnsData, className }) {
     const customStyles = {
         headCells: {
             style: {
-                paddingLeft: '8px', // override the cell padding for head cells
+                paddingLeft: '8px',
                 paddingRight: '8px',
                 fontWeight: 700,
-                fontSize: 18,
+                fontSize: 16,
                 background: 'rgba(0,0,0,0.1)',
                 textalign: 'center'
             },
@@ -45,6 +43,7 @@ export default function Table({ data, columnsData, className }) {
         cells: {
             style: {
                 padding: '6px',
+                hoverColor: 'red'
             },
         },
     };

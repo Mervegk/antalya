@@ -236,6 +236,17 @@ body {
 
 /* FORM END */
 
+/* DATA TABLE START */
+.rdt_TableRow {
+  transition: all .2s linear;
+
+}
+
+.rdt_TableRow:hover {
+  background: #fadc3d;
+}
+
+/* DATA TABLE END */
 @media (min-width: 1400px) {
   .custom-container {
     max-width: 1170px;
