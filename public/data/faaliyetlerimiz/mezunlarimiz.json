@@ -1,0 +1,184 @@
+{
+    "data": [
+        {
+            "name": "Aynur Acar",
+            "universty": "Sinema Filmini mi Hesap Makinesi Ü.",
+            "department": "Eczacılık",
+            "semester": "2024"
+        },
+        {
+            "name": "Özlem Köse",
+            "universty": "Masaya Doğru Gül Ü.",
+            "department": "Dramatik Yazarlık",
+            "semester": "2024"
+        },
+        {
+            "name": "Ebru Bozkurt",
+            "universty": "Doğru Koşuyorlar Ü.",
+            "department": "Fotoğraf",
+            "semester": "2024"
+        },
+        {
+            "name": "Melek Yıldız",
+            "universty": "Umut Teldeki Sokaklarda Ü.",
+            "department": "El Sanatları",
+            "semester": "2024"
+        },
+        {
+            "name": "Hanife Özkan",
+            "universty": "Domates Bundan Ü.",
+            "department": "Kuyumculuk",
+            "semester": "2024"
+        },
+        {
+            "name": "Ayten Kılıç",
+            "universty": "Sevindi Cezbelendi Çakıl Ü.",
+            "department": "Hukuk",
+            "semester": "2024"
+        },
+        {
+            "name": "Sibel Ateş",
+            "universty": "Sandalye Ü.",
+            "department": "İktisat",
+            "semester": "2024"
+        },
+        {
+            "name": "Kübra Yavuz",
+            "universty": "Otobüs Öyle ki Ü.",
+            "department": "İç Mimarlık",
+            "semester": "2023"
+        },
+        {
+            "name": "Hacer Koç",
+            "universty": "Otobüs Balıkhaneye Dergi Gazete Koyun. Ü",
+            "department": "Basın Ve Yayın",
+            "semester": "2023"
+        },
+        {
+            "name": "Hülya Çetin",
+            "universty": "Sıla Yazın Ü.",
+            "department": "İletişim",
+            "semester": "2023"
+        },
+        {
+            "name": "Yasemin Aslan",
+            "universty": "Otobüs Ü.",
+            "department": "Reklamcılık",
+            "semester": "2022"
+        },
+        {
+            "name": "Fadime Doğan",
+            "universty": "Patlıcan Tv Ü.",
+            "department": "Çalışma Ekonomisi Ve Endüstri İlişkileri",
+            "semester": "2022"
+        },
+        {
+            "name": "Enes Köse",
+            "universty": "Göze Çarpan Ü.",
+            "department": "Tıp",
+            "semester": "2022"
+        },
+        {
+            "name": "Hakan Kaya",
+            "universty": "Dergi Ü.",
+            "department": "Elektronik Ve Haberleşme Mühendisliği",
+            "semester": "2022"
+        },
+        {
+            "name": "Salih Acar",
+            "universty": "Umut Adresini Ü.",
+            "department": "Biyomühendislik",
+            "semester": "2022"
+        },
+        {
+            "name": "Metin Güler",
+            "universty": "Çorba Mutlu Oldular ve Türemiş Sıfat Ü.",
+            "department": "Coğrafya",
+            "semester": "2021"
+        },
+        {
+            "name": "Bekir Aydın",
+            "universty": "Koşuyorlar Ü.",
+            "department": "Biyoloji",
+            "semester": "2021"
+        },
+        {
+            "name": "Uğur Şen",
+            "universty": "Düşünüyor Ü.",
+            "department": "Beslenme Ve Diyetetik",
+            "semester": "2021"
+        },
+        {
+            "name": "Halil İbrahim Acar",
+            "universty": "Gül Hesap Ü.",
+            "department": "Bankacılık",
+            "semester": "2021"
+        },
+        {
+            "name": "Adem Özkan",
+            "universty": "Gördüm Ü.",
+            "department": "Bilgisayar Mühendisliği",
+            "semester": "2021"
+        },
+        {
+            "name": "Ayşegül Şen",
+            "universty": "Anlamsız Ü.",
+            "department": "Bilgisayar Mühendisliği",
+            "semester": "2020"
+        },
+        {
+            "name": "Derya Korkmaz",
+            "universty": "Değirmeni Ü.",
+            "department": "Bilgisayar Mühendisliği",
+            "semester": "2020"
+        },
+        {
+            "name": "Ahmet Koç",
+            "universty": "Değirmeni Ü.",
+            "department": "İnşaat Mühendisliği",
+            "semester": "2020"
+        },
+        {
+            "name": "Ramazan Yıldız",
+            "universty": "Masanın Ü.",
+            "department": "Bilgisayar Mühendisliği",
+            "semester": "2019"
+        },
+        {
+            "name": "Şaban Yıldız",
+            "universty": "Un Değirmeni Ü.",
+            "department": "İnşaat Mühendisliği",
+            "semester": "2019"
+        },
+        {
+            "name": "Elif Aslan",
+            "universty": "Sarmal Ü.",
+            "department": "İlahiyat Mühendisliği",
+            "semester": "2018"
+        },
+        {
+            "name": "Zeliha Avcı",
+            "universty": "Gördüm Ü.",
+            "department": "Peyzaj Mimarlığı",
+            "semester": "2018"
+        },
+        {
+            "name": "Hayriye Özkan",
+            "universty": "Un Değirmeni Ü.",
+            "department": "Bilgisayar Mühendisliği",
+            "semester": "2018"
+        },
+        {
+            "name": "Halil İbrahim Işık",
+            "universty": "Sarmal Ü.",
+            "department": "Bilgisayar Mühendisliği",
+            "semester": "2017"
+        },
+        {
+            "name": "Şerife Kaplan",
+            "universty": "Masanın Ü.",
+            "department": "İlahiyat Mühendisliği",
+            "semester": "2017"
+        }
+    ]
+}

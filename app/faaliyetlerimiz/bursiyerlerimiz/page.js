@@ -36,7 +36,7 @@ export default function Page() {
         };
         loadData();
     }, []);
-    console.log(genderTotal)
+
 
     const items = [
         {
@@ -44,8 +44,8 @@ export default function Page() {
             link: "#"
         },
         {
-            name: "Faaliyet Raporu",
-            link: "/burs/faaliyet-raporu"
+            name: "Bursiyerlerimiz",
+            link: "/faaliyetlerimiz/bursiyerlerimiz"
         }
     ];
 

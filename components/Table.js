@@ -49,7 +49,7 @@ export default function Table({ data, columnsData, className }) {
     };
 
     return (
-        <div className={`${className}`}>
+        <div className={`${className} flex flex-col gap-4 justify-center items-center table-pagination`}>
             <DataTable
                 columns={columns}
                 data={data}
@@ -57,7 +57,7 @@ export default function Table({ data, columnsData, className }) {
                 pagination
                 paginationPerPage={20}
                 paginationComponentOptions={paginationComponentOptions}
-                paginationRowsPerPageOptions={[5, 10, 15]}
+                paginationRowsPerPageOptions={[5, 10, 15, 20]}
                 customStyles={customStyles}
                 progressPending={pending}
                 progressComponent={<Image src={Loading} alt='loading' />}
