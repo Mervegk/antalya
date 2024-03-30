@@ -11,7 +11,7 @@ export const HeaderMenuItems = [
             {
                 id: 6,
                 name: "Vakıf Başkanları",
-                url: "/vakfimiz/vakfi-baskanlari"
+                url: "/vakfimiz/vakif-baskanlari"
             },
             {
                 id: 7,

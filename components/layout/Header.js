@@ -10,10 +10,9 @@ import Cagri from '../../app/assets/image/cagri-merkezi.png'
 // Data
 import { LogoImage } from '@/app/data/images';
 import { SocialMedia } from '@/app/data/social-media';
-import { Number } from '@/app/data/menu';
+import { Number, HeaderMenuItems } from '@/app/data/menu';
 
 function Header() {
-
     const [openMenu, setOpenMenu] = useState(false);
 
     return (
@@ -123,6 +122,22 @@ function Header() {
                     <ul className='flex gap-4 h-full items-center'>
                         <li className='h-full'><div><Image src={LogoImage.image.src} width={100} height={100} alt='' /></div></li>
                         <li className='h-full flex items-center text-lg'><Link href='/' className=''>Ana Sayfa</Link> </li>
+                        {
+                            HeaderMenuItems.map((i) => {
+                                return (
+                                    i.subItems ? <li key={i.id} className='h-full flex items-center text-lg'><Dropdown title={i.name}>
+                                        {
+                                            i.subItems.map((item) => <Link key={item.id} href={item.url} className='w-full hover:bg-neutral-100 align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>{item.name}</Link>)
+                                        }
+                                    </Dropdown></li> : <li key={i.id} className='h-full text-lg'> <Link href={i.url}>{i.name}</Link></li>
+                                )
+
+                            })
+                        }
+                    </ul>
+                    {/* <ul className='flex gap-4 h-full items-center'>
+                        <li className='h-full'><div><Image src={LogoImage.image.src} width={100} height={100} alt='' /></div></li>
+                        <li className='h-full flex items-center text-lg'><Link href='/' className=''>Ana Sayfa</Link> </li>
                         <li className='h-full'>
                             <Dropdown title='Vakfımız'>
                                 <Link href='/vakfimiz/vakfimiz-hakkinda' className='w-full hover:bg-neutral-100 align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Vakfımız Hakkında</Link>
@@ -154,7 +169,7 @@ function Header() {
                             </Dropdown>
                         </li>
                         <li className='h-full text-lg'> <Link href='/iletisim'>İletişim</Link></li>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         </div>
