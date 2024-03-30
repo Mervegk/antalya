@@ -15,7 +15,7 @@ function PageLayout({ items, crumbPageTitle, pageTitle, pageData, contentClasses
                     }
 
                 </div>
-                <div>{children}</div>
+                <div className={`${contentClasses}`}>{children}</div>
             </div>
         </div>
     )

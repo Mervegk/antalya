@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "name": "1",
+            "url": "/images/data/gallery-1.jpg"
+        },
+        {
+            "name": "2",
+            "url": "/images/data/gallery-2.jpg"
+        },
+        {
+            "name": "3",
+            "url": "/images/data/gallery-3.jpg"
+        },
+        {
+            "name": "4",
+            "url": "/images/data/gallery-4.jpg"
+        },
+        {
+            "name": "5",
+            "url": "/images/data/gallery-5.jpg"
+        },
+        {
+            "name": "6",
+            "url": "/images/data/gallery-6.jpg"
+        }
+    ]
+}

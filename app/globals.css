@@ -247,6 +247,19 @@ body {
 }
 
 /* DATA TABLE END */
+
+/* GALLERY START */
+.react-photo-album--photo {
+  object-fit: cover;
+}
+
+.yarl__slide_image {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* GALLERY END */
+
 @media (min-width: 1400px) {
   .custom-container {
     max-width: 1170px;
