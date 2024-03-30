@@ -153,7 +153,7 @@ function Header() {
                                 <Link href='/galeri/video-galeri' className='w-full hover:bg-neutral-100 align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>Video Galerisi</Link>
                             </Dropdown>
                         </li>
-                        <li className='h-full text-lg'> <Link href='./iletisim'>İletişim</Link></li>
+                        <li className='h-full text-lg'> <Link href='/iletisim'>İletişim</Link></li>
                     </ul>
                 </div>
             </div>
