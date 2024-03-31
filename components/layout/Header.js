@@ -25,7 +25,22 @@ function Header() {
                     <div className='w-full flex items-center justify-end text-3xl px-4'>
                         <button onClick={() => setOpenMenu(false)} className='border rounded p-1'><RiCloseFill /></button>
                     </div>
-                    <ul className='grid grid-cols-1 gap-4'>
+                    <ul className='h-full list-none flex flex-col justify-evenly'>
+                        <li className='flex items-center text-lg'><Link href='/' className=''>Ana Sayfa</Link></li>
+                        {
+                            HeaderMenuItems.map((i) => {
+                                return (
+                                    i.subItems ? <li key={i.id} className='flex gap-4 items-center text-lg'>
+                                        <Dropdown title={i.name} trigger="click">
+                                            {
+                                                i.subItems.map((item) => <Link key={item.id} href={item.url} className='w-full align-middle text-[14px] px-2 py-2 transition-all duration-200 ease-in-out'>{item.name}</Link>)
+                                            }
+                                        </Dropdown></li> : <li key={i.id} className='text-lg'> <Link href={i.url}>{i.name}</Link></li>
+                                )
+                            })
+                        }
+                    </ul>
+                    {/* <ul className='grid grid-cols-1 gap-4'>
                         <li>
                             <p>Vakfımız</p>
                             <ul className='grid grid-cols-1 gap-2 mt-1'>
@@ -88,7 +103,7 @@ function Header() {
                                 </li>
                             </ul>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
 
                 <div className='grid grid-cols-1 justify-center w-full py-2'>
@@ -145,11 +160,12 @@ function Header() {
                         {
                             HeaderMenuItems.map((i) => {
                                 return (
-                                    i.subItems ? <li key={i.id} className='h-full flex items-center text-lg'><Dropdown title={i.name}>
-                                        {
-                                            i.subItems.map((item) => <Link key={item.id} href={item.url} className='w-full hover:bg-neutral-100 align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>{item.name}</Link>)
-                                        }
-                                    </Dropdown></li> : <li key={i.id} className='h-full text-lg'> <Link href={i.url}>{i.name}</Link></li>
+                                    i.subItems ? <li key={i.id} className='h-full flex items-center text-lg'>
+                                        <Dropdown title={i.name} trigger="hover">
+                                            {
+                                                i.subItems.map((item) => <Link key={item.id} href={item.url} className='w-full hover:bg-neutral-100 align-middle text-[14px] px-2 py-3 transition-all duration-200 ease-in-out'>{item.name}</Link>)
+                                            }
+                                        </Dropdown></li> : <li key={i.id} className='h-full text-lg'> <Link href={i.url}>{i.name}</Link></li>
                                 )
 
                             })
