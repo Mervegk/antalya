@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from '@/components/layout/Footer';
+import Transition from '@/Transition';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,11 +66,13 @@ const Poppins = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${Poppins.className} overflow-x-hidden`}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
+      <Transition>
+        <body className={`${Poppins.className} overflow-x-hidden`}>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </Transition>
     </html>
   );
 }

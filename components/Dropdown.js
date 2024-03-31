@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { RiArrowDownSFill } from "react-icons/ri";
 import classNames from 'classnames';
 
-function Dropdown({ children, title }) {
+function Dropdown({ children, title, trigger }) {
 
     const [open, setOpen] = useState(false);
 

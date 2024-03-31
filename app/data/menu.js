@@ -89,11 +89,11 @@ export const HeaderMenuItems = [
             {
                 id: 18,
                 name: "Fotoğraf Galerisi",
-                url: "/galeri/fotograf-galerisi"
+                url: "/galeri/fotograf-galeri"
             }, {
                 id: 19,
                 name: "Video Galerisi",
-                url: "/galeri/video-galerisi"
+                url: "/galeri/video-galeri"
             }
         ]
     },
