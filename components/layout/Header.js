@@ -154,8 +154,8 @@ function Header() {
                     </div>
                 </div>
                 <div className='custom-container mx-auto hidden md:block'>
-                    <ul className='flex gap-4 h-full items-center'>
-                        <li className='h-full'><div><Image src={LogoImage.image.src} width={100} height={100} alt='' /></div></li>
+                    <ul className='flex gap-4 h-full items-center max-lg:gap-3'>
+                        <li className='h-full'><div><img src={LogoImage.image.src} className='lg:w-[100px] lg:h-[100px] md:w-[80px] md:h-[80px]' alt='' /></div></li>
                         <li className='h-full flex items-center text-lg'><Link href='/' className=''>Ana Sayfa</Link> </li>
                         {
                             HeaderMenuItems.map((i) => {

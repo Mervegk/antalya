@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Loader() {
+export default function Loader({ loaderText }) {
     return (
-        <div className='h-screen w-screen flex items-center justify-center'>
-            <svg width="75" height="75" viewBox="0 0 75 75" xmlns="http://www.w3.org/2000/svg" stroke="#FABC3D">
+        <div className='h-screen w-screen flex flex-col items-center justify-center'>
+            <svg width="60" height="75" viewBox="0 0 50 75" xmlns="http://www.w3.org/2000/svg" stroke="#FABC3D">
                 <g fill="none" fill-rule="evenodd">
                     <g transform="translate(1 1)" stroke-width="2">
                         <circle cx="5" cy="50" r="5">
@@ -48,6 +48,7 @@ export default function Loader() {
                     </g>
                 </g>
             </svg>
+            <h2 className='text-maincolor font-medium'>{loaderText}</h2>
         </div>
     )
 }

@@ -11,11 +11,11 @@ export default function Transition({ children }) {
         setTransition(true);
         const timer = setTimeout(() => {
             setTransition(false);
-        }, 1000);
+        }, 1500);
 
         return () => clearTimeout(timer);
     }, [pathname]);
     return transition ?
-        <Loader /> : children
+        <Loader loaderText="Sunflower Vakfı" /> : children
 
 }
