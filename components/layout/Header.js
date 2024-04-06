@@ -16,7 +16,7 @@ function Header() {
     const [openMenu, setOpenMenu] = useState(false);
 
     return (
-        <div>
+        <header>
             <div className={classNames('bg-white absolute w-screen h-full py-4 px-2 flex flex-col justify-between transition-all duration-200 linear', {
                 'opacity-0 -mr-[100px] z-[-10]': !openMenu,
                 'opacity-1 mr-0  z-[100]': openMenu
@@ -208,7 +208,7 @@ function Header() {
                     </ul> */}
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

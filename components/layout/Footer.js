@@ -10,13 +10,14 @@ function Footer() {
     };
     let currentYear = new Date().getFullYear();
     return (
-        <div className='bg-contain bg-bottom bg-no-repeat relative flex flex-col justify-between max-h-[24rem] min-h-[24rem] mt-8 p-4 max-lg:pb-0' style={footerBg} >
+        <footer className='bg-contain bg-bottom bg-no-repeat relative flex flex-col justify-between max-h-[24rem] min-h-[24rem] mt-8 p-4 max-lg:pb-0' style={footerBg} >
             <div id='footer-top' className='container mx-auto'>
                 <div className='flex max-lg:flex-col gap-2 items-center justify-center'>
                     <div><img src={LogoImage.image.src} alt='Logo' className='max-md:w-24 md:w-28 lg:w-[200px]' /></div>
-                    <div className='grid grid-cols-[40%_60%] gap-2 lg:gap-4 items-center justify-between text-lg max-md:px-4'>
-                        <div className='w-full'>
-                            <ul className='flex max-md:flex-col max-md:gap-2 md:gap-8 list-disc'>
+                    <div className='flex gap-4 lg:gap-8 items-center justify-between text-lg max-md:px-4'>
+                        <div className='flex-grow'>
+                            <ul className='flex max-md:flex-col max-md:gap-2 md:
+                            gap-8 list-disc'>
                                 {
                                     FooterMenuItems.map((i) => {
                                         return <li key={i.id}><Link href={i.url} className='text-base lg:text-xl'>{i.name}</Link></li>
@@ -44,7 +45,7 @@ function Footer() {
             {/*  <div className='absolute bottom-0 left-0 h-full flex items-end z-[-1] w-full'>
                 <Image src={FooterBgImage.image} alt='footer' className='w-full object-cover' />
             </div> */}
-        </div>
+        </footer>
     )
 }
 
