@@ -31,7 +31,7 @@ export default function Page() {
         },
         {
             name: "Fotoğraf Galerisi",
-            link: "/galeri/fotograf-galerisi"
+            link: "/galeri/fotograf-galeri"
         }
     ];
 

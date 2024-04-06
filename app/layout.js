@@ -66,13 +66,13 @@ const Poppins = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Transition>
-        <body className={`${Poppins.className} overflow-x-hidden`}>
+      <body className={`${Poppins.className} overflow-x-hidden`}>
+        <Transition>
           <Header />
           {children}
           <Footer />
-        </body>
-      </Transition>
+        </Transition>
+      </body>
     </html>
   );
 }

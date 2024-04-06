@@ -72,7 +72,7 @@ export default function Home() {
           </div>
           <div className="foto-galeri max-md:h-64 relative inline-block w-full">
             <Link href='/galeri/fotograf-galeri'>
-              <div className="h-40">
+              <div className="h-full">
                 <img src={Galeri.image.src} alt="foto" className="w-full h-full object-cover" />
               </div>
               <div className="absolute top-0 left-0 h-full w-full bg-secondcolor/90 z-10 flex items-center justify-center">
@@ -82,7 +82,7 @@ export default function Home() {
           </div>
           <div className="foto-galeri max-md:h-64 relative inline-block w-full">
             <Link href='/galeri/video-galeri'>
-              <div className="h-40">
+              <div className="h-full">
                 <img src={Galeri.image.src} alt="foto" className="w-full h-full object-cover" />
               </div>
               <div className="absolute top-0 left-0 h-full w-full bg-maincolor/90 z-10 flex items-center justify-center">
