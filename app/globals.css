@@ -107,6 +107,11 @@ body {
   height: 382px;
 }
 
+.address-map iframe {
+  width: 450px;
+  height: 500px;
+}
+
 /*  SLİCK SLİDER START */
 
 .slick-prev:before,
