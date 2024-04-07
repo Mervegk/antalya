@@ -42,20 +42,15 @@ export const HeaderMenuItems = [
             {
                 id: 11,
                 name: "Burs Başvurusu Yap",
-                url: "/burs/burs-ve-odul-yonetmeligi"
-            },
-            {
-                id: 12,
-                name: "Burs ve Ödül Yönetmeliği",
                 url: "/burs/burs-basvurusu-yap"
             },
             {
-                id: 13,
+                id: 12,
                 name: "Burs Sonuçları",
                 url: "/burs/burs-sonuclari"
             },
             {
-                id: 14,
+                id: 13,
                 name: "Bağış Yapmak İstiyorum",
                 url: "/burs/bagis-yapmak-istiyorum"
             }
@@ -66,17 +61,17 @@ export const HeaderMenuItems = [
         name: "Faaliyetlerimiz",
         subItems: [
             {
-                id: 15,
+                id: 14,
                 name: "Faaliyet Raporu",
                 url: "/faaliyetlerimiz/faaliyet-raporu"
             },
             {
-                id: 16,
+                id: 15,
                 name: "Bursiyerlerimiz",
                 url: "/faaliyetlerimiz/bursiyerlerimiz"
             },
             {
-                id: 17,
+                id: 16,
                 name: "Mazunlarımız",
                 url: "/faaliyetlerimiz/mezunlarimiz"
             }
@@ -87,11 +82,11 @@ export const HeaderMenuItems = [
         name: "Galeri",
         subItems: [
             {
-                id: 18,
+                id: 17,
                 name: "Fotoğraf Galerisi",
                 url: "/galeri/fotograf-galeri"
             }, {
-                id: 19,
+                id: 18,
                 name: "Video Galerisi",
                 url: "/galeri/video-galeri"
             }

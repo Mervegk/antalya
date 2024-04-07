@@ -17,12 +17,12 @@ function Header() {
 
     return (
         <header>
-            <div className={classNames('bg-white absolute w-screen h-full py-4 px-2 flex flex-col justify-between transition-all duration-200 linear', {
+            <div className={classNames('bg-white absolute w-screen h-full py-4 px-2 flex flex-col justify-between transition-all duration-100 linear', {
                 'opacity-0 -mr-[100px] z-[-10]': !openMenu,
                 'opacity-1 mr-0  z-[100]': openMenu
             })}>
                 <div className='flex flex-col h-full'>
-                    <div className='w-full flex items-center justify-end text-3xl px-4'>
+                    <div className='w-full flex items-center justify-end text-3xl px-4 pr-6'>
                         <button onClick={() => setOpenMenu(false)} className='border rounded p-1'><RiCloseFill /></button>
                     </div>
                     <ul className='h-full list-none flex flex-col self-center justify-center gap-6'>

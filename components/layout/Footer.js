@@ -10,7 +10,7 @@ function Footer() {
     };
     let currentYear = new Date().getFullYear();
     return (
-        <footer className='bg-contain bg-bottom bg-no-repeat relative flex flex-col justify-between max-h-[24rem] min-h-[24rem] mt-8 p-4 max-lg:pb-0' style={footerBg} >
+        <footer className='sm:bg-contain bg-bottom bg-no-repeat relative flex flex-col justify-between max-h-[24rem] min-h-[24rem] mt-8 p-4 max-lg:pb-0' style={footerBg} >
             <div id='footer-top' className='container mx-auto'>
                 <div className='flex max-lg:flex-col gap-2 items-center justify-center'>
                     <div><img src={LogoImage.image.src} alt='Logo' className='max-md:w-24 md:w-28 lg:w-[200px]' /></div>
@@ -39,7 +39,7 @@ function Footer() {
                 </div>
 
             </div>
-            <div id='footer-bottom' className='font-semibold text-center text-white'>
+            <div id='footer-bottom' className='font-semibold text-center text-white max-sm:text-sm'>
                 Copyright © SunFlower {currentYear}. Tüm hakları saklıdır.
             </div>
             {/*  <div className='absolute bottom-0 left-0 h-full flex items-end z-[-1] w-full'>
