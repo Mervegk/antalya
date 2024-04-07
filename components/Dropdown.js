@@ -25,11 +25,11 @@ function Dropdown({ children, title, trigger }) {
                 )
             case triggerOptions.click:
                 return (
-                    <div>
-                        <p className='flex items-center gap-2 h-full text-lg' onClick={() => setOpen((prev) => !prev)}>{title} <RiArrowDownSFill /></p>
-                        <div className={classNames('flex-col lg:w-4 transition-all duration-150 ease-linear', {
-                            'flex mt-0': open,
-                            'hidden -mt-[100]': !open
+                    <div className='w-full cursor-pointer'>
+                        <p className='flex items-center gap-2 h-full text-lg justify-between' onClick={() => setOpen((prev) => !prev)}>{title} <RiArrowDownSFill /></p>
+                        <div className={classNames('flex-col lg:w-4 transition-all duration-150 ease-linear delay-75', {
+                            'flex mt-0 translate-x-2 opacity-1': open,
+                            'hidden -mt-[100] translate-x-0 opacity-0': !open
                         })}>{children}</div>
                     </div>
                 )

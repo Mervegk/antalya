@@ -21,11 +21,11 @@ function Header() {
                 'opacity-0 -mr-[100px] z-[-10]': !openMenu,
                 'opacity-1 mr-0  z-[100]': openMenu
             })}>
-                <div>
+                <div className='flex flex-col h-full'>
                     <div className='w-full flex items-center justify-end text-3xl px-4'>
                         <button onClick={() => setOpenMenu(false)} className='border rounded p-1'><RiCloseFill /></button>
                     </div>
-                    <ul className='h-full list-none flex flex-col justify-evenly'>
+                    <ul className='h-full list-none flex flex-col self-center justify-center gap-6'>
                         <li className='flex items-center text-lg'><Link href='/' className=''>Ana Sayfa</Link></li>
                         {
                             HeaderMenuItems.map((i) => {
