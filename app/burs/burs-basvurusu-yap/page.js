@@ -5,7 +5,7 @@ import Form from '@/components/Form';
 
 function Page() {
 
-    let bursFormuGoster = false;
+    let bursFormuGoster = true;
     const items = [
         {
             name: "Burs",
