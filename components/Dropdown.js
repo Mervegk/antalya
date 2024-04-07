@@ -19,7 +19,7 @@ function Dropdown({ children, title, trigger }) {
                     <div className='h-full'>
                         <div className='dropdown h-full'>
                             <p className='flex items-center gap-2 h-full text-lg'>{title} <RiArrowDownSFill /></p>
-                            <div className='children flex flex-col lg:w-48'>{children}</div>
+                            <div className='dropdown-items flex flex-col lg:w-48'>{children}</div>
                         </div>
                     </div>
                 )

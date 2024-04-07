@@ -17,7 +17,7 @@ function Footer() {
                     <div className='flex gap-4 lg:gap-8 items-center justify-between text-lg max-md:px-4'>
                         <div className='flex-grow'>
                             <ul className='flex max-md:flex-col max-md:gap-2 md:
-                            gap-8 list-disc'>
+                            gap-8'>
                                 {
                                     FooterMenuItems.map((i) => {
                                         return <li key={i.id}><Link href={i.url} className='text-base lg:text-xl'>{i.name}</Link></li>

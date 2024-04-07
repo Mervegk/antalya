@@ -133,7 +133,7 @@ function Header() {
                             <ul className='flex gap-2 items-center justify-end align-middle h-full'>
                                 {
                                     SocialMedia.map((i, index) => {
-                                        return <li key={index} className='hover:text-red-700'><a href={i.url} target='_blank' className='text-2xl'>{i.icon}</a></li>
+                                        return <li key={index} className='text-[#BDBDBD] hover:text-red-700'><a href={i.url} target='_blank' className='text-2xl'>{i.icon}</a></li>
                                     })
                                 }
                             </ul>

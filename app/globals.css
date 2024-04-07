@@ -12,6 +12,12 @@
   :root {}
 }
 
+@layer components {
+  .contact-info {
+    @apply flex items-center justify-center gap-4 font-bold text-xl md:text-[28px] text-secondcolor
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -80,22 +86,25 @@ body {
   height: 100%;
 }
 
-.children {
-  display: none;
+.dropdown-items {
   position: absolute;
   top: 90%;
-  z-index: 100;
+  z-index: -1;
+  opacity: 0;
   padding: 5px 0 5px 0;
+  min-width: 200px;
   background: white;
   border-radius: 5px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  transform: translateY(0);
-  transition: transform 4s ease;
+  transform: translateY(-100);
+  transition: all .2s linear;
 }
 
-.dropdown:hover>.children {
+.dropdown:hover>.dropdown-items {
   display: flex;
-  transform: translateY(1px);
+  z-index: 100;
+  opacity: 1;
+  transform: translateY(5px);
 }
 
 .announcement-left {
@@ -315,5 +324,11 @@ body {
 @media (max-width: 576px) {
   .custom-container {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .address-map iframe {
+    width: 100%;
   }
 }
