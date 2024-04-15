@@ -1,10 +1,13 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
+import classNames from 'classnames';
 import PageLayout from '@/components/layout/PageLayout';
 import { Form } from '@/components/form/Form'
-import { Input, Select, Radio } from '@/components/form/FormItem';
+import { Input, Select, Radio, TextArea, CheckBox } from '@/components/form/FormItem';
 
 export default function LoaderTest() {
+    const [fcChecked, setFcChecked] = useState(false);
+    const [igChecked, setIgChecked] = useState(false);
 
     const onSubmit = (e) => {
         console.log(e)
@@ -14,6 +17,17 @@ export default function LoaderTest() {
         {
             name: "Custom Form",
             link: "/loader"
+        }
+    ]
+
+    const yesNoOptions = [
+        {
+            label: "Evet",
+            value: 1
+        },
+        {
+            label: "Hayır",
+            value: 0
         }
     ]
 
@@ -46,16 +60,42 @@ export default function LoaderTest() {
     return (
         <PageLayout items={items} pageTitle="Custom Form Component">
             <Form onSubmit={onSubmit}>
-                <div className='flex flex-col'>
-                    <Input name="name" label="Name?" placeholder="name" validation={{
+                <div className='flex flex-col mt-8 gap-4'>
+                    <Radio group label="Vakıf-Özel üniversitelerinden öğreniminizi 100% burslu yapacağınızı onaylıyor musunuz?" name="burs" options={yesNoOptions} />
+                    <Radio group label="Üniversite eğitim ve öğretiminizin İstanbul il ve ilçelerinden birisinde olduğunu onaylıyor musunuz?" name="schoolCity" options={yesNoOptions} />
+                    <Input name="name" label="Name?" placeholder="name" /* validation={{
                         required: {
                             value: true,
-                            message: 'Required!',
+                            message: 'Zorunlu Alan!',
                         },
-                    }} />
+                    }} */ />
                     <Select name="bloodType" label="Kan Grubu" placeholder="Kan grubu" options={options} />
-                    <Radio singular={false} />
-                    <button type="submit">Gönder</button>
+                    <TextArea name="dusunceleriniz" label="Düşünceleriniz?" />
+                    <CheckBox name="fc" placeholder="Facebook" value="facebook" onChange={(e) => {
+                        if (e.target.checked === true) {
+                            setFcChecked(true);
+                        } else if (e.target.checked === false) {
+                            setFcChecked(false);
+                        }
+                    }
+                    } />
+                    <CheckBox name="ig" placeholder="Instagram" value="instagram" onChange={(e) => {
+                        if (e.target.checked === true) {
+                            setIgChecked(true);
+                        } else if (e.target.checked === false) {
+                            setIgChecked(false);
+                        }
+                    }
+                    } />
+                    <div className='flex items-center gap-4'>
+                        <div className={classNames('flex-grow flex-col w-1/2', { 'flex': fcChecked, 'hidden': !fcChecked })}>
+                            <Input name="facebook" label="Facebook" />
+                        </div>
+                        <div className={classNames('flex-grow flex-col w-1/2', { 'flex': igChecked, 'hidden': !igChecked })}>
+                            <Input name="instagram" label="Instagram" />
+                        </div>
+                    </div>
+                    <button type="submit" className='button-main mt-8'>Gönder</button>
                 </div>
 
             </Form>
