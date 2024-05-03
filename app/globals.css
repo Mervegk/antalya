@@ -165,6 +165,21 @@ body {
   box-shadow: 0px 0px 5px 2px rgba(10, 116, 179, .5);
 }
 
+.form-input-textarea {
+  background: white;
+  outline: 1px solid transparent;
+  border-radius: 5px;
+  padding: 10px;
+  /* flex-grow: 1; */
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .3);
+  transition: all .23s linear;
+}
+
+.form-input-textareat:focus-visible {
+  outline: 1px solid var(--secondary-color);
+  box-shadow: 0px 0px 5px 2px rgba(10, 116, 179, .5);
+}
+
 .checkbox input[type="checkbox" i] {
   width: 15px;
   height: 15px;
@@ -246,6 +261,20 @@ body {
   -moz-appearance: none;
   appearance: none;
   display: none;
+}
+
+.react-datepicker__input-container {
+  border-radius: 5px;
+}
+
+.react-datepicker__input-container:focus-visible {
+  outline: 2px solid var(--primary-color);
+}
+
+.form-date .react-datepicker__close-icon::after {
+  color: var(--secondary-color);
+  background: unset;
+  font-size: 24px;
 }
 
 /* FORM END */

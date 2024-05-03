@@ -1,9 +1,14 @@
 'use client'
 import React, { useState } from "react";
 import classNames from "classnames";
-import { useFormContext } from "react-hook-form";
+import { useFormContext, Controller } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { label } from "yet-another-react-lightbox";
+import DatePicker from "react-datepicker";
+import moment from "moment";
+
+import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+import "react-datepicker/dist/react-datepicker.css";
 
 export const Input = ({ name, label, type, placeholder, validation, onChange }) => {
   const { register, formState: { errors } } = useFormContext();
@@ -82,19 +87,18 @@ export const Radio = ({ name, label, value, placeholder, validation, group, opti
   )
 }
 
-export const TextArea = ({ name, label, placeholder, validation, onChange }) => {
+export const TextArea = ({ name, label, placeholder, validation, onChange, height }) => {
   const { register, formState: { errors } } = useFormContext();
   return (
     <div className='flex flex-col w-full'>
       <label className='label'>{label}</label>
-      <textarea name={name} {...register(name, validation)} className='form-input !h-32' placeholder={placeholder} onChange={onChange}></textarea>
+      <textarea name={name} {...register(name, validation)} className={`form-input-textarea min-h-3 ${height}`} placeholder={placeholder} onChange={onChange}></textarea>
     </div>
   );
 }
 
 export const CheckBox = ({ name, label, placeholder, validation, value, onChange }) => {
   const { register, formState: { errors } } = useFormContext();
-
   return (
     <div>
       <div className='flex gap-4 checkbox'>
@@ -105,6 +109,46 @@ export const CheckBox = ({ name, label, placeholder, validation, value, onChange
       </div>
     </div>
   );
+}
 
+export const CustomDatePicker = ({ name, label, placeholder, validation, required }) => {
+  console.log(required);
+  const { register, formState: { errors }, control } = useFormContext();
+  const [startDate, setStartDate] = useState(null);
+  return (
+    <div>
+      <div className='flex gap-4 checkbox'>
+        <div className='flex items-center gap-2 form-date'>
+          {required ? <label className='label'><span className="text-red-500">*</span>{label}</label> : <label className='label'>{label}</label>}
 
+          <Controller
+            name={name}
+            control={control}
+            rules={{ required: required }}
+            render={({ field }) => (
+              <DatePicker
+                {...field}
+                selected={startDate}
+                onChange={(date) => {
+                  setStartDate(date);
+                  const formattedDate = moment(date).format('YYYY-MM-DD');
+                  field.onChange(formattedDate); // Update the form value
+                }}
+                dateFormat="dd.MM.yyyy"
+                className='form-input rounded-[5px] focus-visible:border-maincolor p-2'
+                placeholderText={placeholder}
+                filterDate={(date) => moment() > date}
+                ref={(ref) => {
+                  // Forward the ref to react-datepicker
+                  field.ref({
+                    focus: () => ref.current && ref.current.input.focus(),
+                  });
+                }}
+              />
+            )}
+          />
+        </div>
+      </div>
+    </div>
+  );
 }

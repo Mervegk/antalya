@@ -3,12 +3,11 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import PageLayout from '@/components/layout/PageLayout';
 import { Form } from '@/components/form/Form'
-import { Input, Select, Radio, TextArea, CheckBox } from '@/components/form/FormItem';
-
+import { Input, Select, Radio, TextArea, CheckBox, CustomDatePicker } from '@/components/form/FormItem';
+import { useForm } from 'react-hook-form';
 export default function LoaderTest() {
     const [fcChecked, setFcChecked] = useState(false);
     const [igChecked, setIgChecked] = useState(false);
-
     const onSubmit = (e) => {
         console.log(e)
     }
@@ -70,7 +69,7 @@ export default function LoaderTest() {
                         },
                     }} */ />
                     <Select name="bloodType" label="Kan Grubu" placeholder="Kan grubu" options={options} />
-                    <TextArea name="dusunceleriniz" label="Düşünceleriniz?" />
+                    <TextArea name="dusunceleriniz" label="Düşünceleriniz?" height="h-28" />
                     <CheckBox name="fc" placeholder="Facebook" value="facebook" onChange={(e) => {
                         if (e.target.checked === true) {
                             setFcChecked(true);
@@ -95,9 +94,9 @@ export default function LoaderTest() {
                             <Input name="instagram" label="Instagram" />
                         </div>
                     </div>
+                    <CustomDatePicker name="ADay" label="tarih" placeholder="Tarih seç" required />
                     <button type="submit" className='button-main mt-8'>Gönder</button>
                 </div>
-
             </Form>
         </PageLayout>
 
