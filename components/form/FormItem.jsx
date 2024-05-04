@@ -111,16 +111,19 @@ export const CheckBox = ({ name, label, validation, value, onChange }) => {
   );
 }
 
-export const CustomDatePicker = ({ name, label, placeholder, validation, required }) => {
+export const CustomDatePicker = ({ name, label, placeholder, validation, isClearable, yearLimit, yearLimitMessage }) => {
   const { control, formState: { errors } } = useFormContext();
-  const [startDate, setStartDate] = useState(null);
-  const inputRef = useRef(null);
+  const [isValid, setIsValid] = useState(true);
 
-  /*  useEffect(() => {
-     if (errors[name] && inputRef.current) {
-       inputRef.current.setFocus();
-     }
-   }, [errors[name]]); */
+  const isDateValid = (date) => {
+    if (yearLimit) {
+      const today = moment();
+      const minDate = moment(date);
+      const year = today.diff(minDate, 'years');
+      return year >= yearLimit;
+    }
+    return true;
+  };
 
   return (
     <div className='flex gap-4 checkbox'>
@@ -130,26 +133,22 @@ export const CustomDatePicker = ({ name, label, placeholder, validation, require
         <Controller
           name={name}
           control={control}
-          rules={validation}
           render={({ field }) => (
             <div className="flex flex-col gap-2">
               <DatePicker
                 {...field}
-                isClearable
-                to
-                selected={startDate}
+                selected={field.value ? new Date(field.value) : null}
+                isClearable={isClearable}
                 onChange={(date) => {
-                  setStartDate(date);
                   const formattedDate = date ? moment(date).format('YYYY-MM-DD') : '';
                   field.onChange(formattedDate);
+                  setIsValid(isDateValid(formattedDate));
                 }}
-                dateFormat="dd.MM.yyyy"
-                className='form-input rounded-[5px] focus-visible:border-maincolor p-2'
                 placeholderText={placeholder}
-                filterDate={(date) => moment() > date}
-                id={name}
-                ref={inputRef}
+                dateFormat="dd.MM.yyyy"
+                className='form-input rounded-[5px] focus-visible:border-maincolor p-2 w-full'
               />
+              {!isValid && <div className="text-red-500">{yearLimitMessage}</div>}
               {errors[name] && <div className="text-red-500">{errors[name].message}</div>}
             </div>
           )}

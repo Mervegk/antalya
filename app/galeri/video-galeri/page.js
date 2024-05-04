@@ -34,7 +34,7 @@ export default function Page() {
             link: "/galeri/video-galeri"
         }
     ];
-    console.log(data);
+
     return (
         <PageLayout items={items} crumbPageTitle="Video Galerisi" pageTitle="Video Galerisi" contentClasses='mt-12'>
             {/*  <div className='grid grid-cols-2 gap-4'>

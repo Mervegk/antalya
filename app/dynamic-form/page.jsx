@@ -10,6 +10,7 @@ export default function LoaderTest() {
     const [igChecked, setIgChecked] = useState(false);
     const onSubmit = (e) => {
         console.log(e)
+        console.log(e.birthDate);
     }
 
     const items = [
@@ -62,20 +63,21 @@ export default function LoaderTest() {
                 <div className='flex flex-col mt-8 gap-4'>
                     <Radio group label="Vakıf-Özel üniversitelerinden öğreniminizi 100% burslu yapacağınızı onaylıyor musunuz?" name="burs" options={yesNoOptions} />
                     <Radio group label="Üniversite eğitim ve öğretiminizin İstanbul il ve ilçelerinden birisinde olduğunu onaylıyor musunuz?" name="schoolCity" options={yesNoOptions} />
-                    <Input name="name" label="Adınız Soyadınız" placeholder="name" validation={{
-                        required: {
-                            value: true,
-                            message: 'Zorunlu Alan!',
-                        },
-                        minLength: {
-                            value: 1,
-                            message: 'En az 1 karakter',
-                        },
-                        maxLength: {
-                            value: 5,
-                            message: 'En fazla 5 karakter',
-                        },
-                    }} />
+                    <Input name="name" label="Adınız Soyadınız" placeholder="name"
+                      /*   validation={{
+                            required: {
+                                value: true,
+                                message: 'Zorunlu Alan!',
+                            },
+                            minLength: {
+                                value: 1,
+                                message: 'En az 1 karakter',
+                            },
+                            maxLength: {
+                                value: 5,
+                                message: 'En fazla 5 karakter',
+                            },
+                        }} */ />
                     <Input name="email" label="E-posta adresiniz" placeholder="ornek@ornek.com" validation={{
                         pattern: {
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -127,12 +129,14 @@ export default function LoaderTest() {
                             <Input name="instagram" label="Instagram" />
                         </div>
                     </div>
-                    <CustomDatePicker name="birthDate" label="Doğum Tarihiniz" placeholder="Tarih seç" validation={{
+                    <CustomDatePicker name="birthDate" label="Doğum Tarihiniz" placeholder="Tarih seç" isClearable validation={{
                         required: {
                             value: true,
                             message: 'Zorunlu Alan!',
                         }
-                    }} />
+                    }} yearLimit={1}
+                        yearLimitMessage='1 yaşından büyük olmalısınız'
+                    />
                     <button type="submit" className='button-main mt-8'>Gönder</button>
                 </div>
             </Form>
