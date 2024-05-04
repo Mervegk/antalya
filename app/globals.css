@@ -244,8 +244,9 @@ body {
   text-align: center;
   font-weight: medium;
   background: #888;
-  transition: 0.3s;
   min-width: 65px;
+  cursor: pointer;
+  transition: 0.3s;
   transition: all 150ms linear;
 }
 
