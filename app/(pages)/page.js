@@ -5,9 +5,9 @@ import Link from "next/link";
 import Slide from "@/components/Slide";
 import Announcment from "@/components/homepage/Announcment";
 import { RiFolderImageLine, RiFolderVideoLine } from "react-icons/ri";
-import { HeroImage, BursBasvuruImg, BursSonucImg, BagisYap, Galeri } from "./data/images";
-import Illust1 from '../app/assets/svg/illust1.svg';
-import Illust2 from '../app/assets/svg/illus2.svg';
+import { HeroImage, BursBasvuruImg, BursSonucImg, BagisYap, Galeri } from "../data/images";
+import Illust1 from '../assets/svg/illust1.svg';
+import Illust2 from '../assets/svg/illus2.svg';
 
 
 const fetchSliderData = async () => {

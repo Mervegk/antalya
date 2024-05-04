@@ -129,13 +129,14 @@ export default function LoaderTest() {
                             <Input name="instagram" label="Instagram" />
                         </div>
                     </div>
-                    <CustomDatePicker name="birthDate" label="Doğum Tarihiniz" placeholder="Tarih seç" isClearable validation={{
-                        required: {
-                            value: true,
-                            message: 'Zorunlu Alan!',
-                        }
-                    }} yearLimit={1}
-                        yearLimitMessage='1 yaşından büyük olmalısınız'
+                    <CustomDatePicker name="birthDate" label="Doğum Tarihiniz" placeholder="Tarih seç" yearLimit={1}
+                        yearLimitMessage='1 yaşından büyük olmalısınız' isClearable
+                        validation={{
+                            required: {
+                                value: true,
+                                message: 'Zorunlu Alan!',
+                            }
+                        }}
                     />
                     <button type="submit" className='button-main mt-8'>Gönder</button>
                 </div>

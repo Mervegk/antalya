@@ -14,7 +14,6 @@ function Page() {
     useEffect(() => {
         fetchData().then((res) => setData(res.data));
     }, []);
-    console.log(data)
 
     const items = [
         {
