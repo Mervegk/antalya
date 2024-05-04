@@ -2,6 +2,7 @@ import localFont from 'next/font/local';
 import { Inter } from "next/font/google";
 import "../globals.css";
 import Transition from '@/Transition';
+import Sidebar from '@/components/panel/layout/Sidebar';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={` overflow-x-hidden`}>
         <Transition>
+          <Sidebar />
           {children}
         </Transition>
       </body>
