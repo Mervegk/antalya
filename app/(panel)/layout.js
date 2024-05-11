@@ -16,8 +16,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={` overflow-x-hidden`}>
         <Transition>
-          <Sidebar />
-          {children}
+          <div className='flex'>
+            <Sidebar />
+
+            {children}
+          </div>
         </Transition>
       </body>
     </html>

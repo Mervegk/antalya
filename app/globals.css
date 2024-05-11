@@ -16,11 +16,25 @@
   .contact-info {
     @apply flex items-center justify-center gap-4 font-bold text-xl md:text-[28px] text-secondcolor
   }
+
+  .sidebar-menu {
+    @apply hover:bg-secondcolor/50 text-thirdcolor hover:text-white
+  }
+
+  .sidebar-menu-active {
+    @apply bg-gradient-to-tr from-secondcolor/15 to-secondcolor/30 text-secondcolor
+  }
+
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  #active {
+    background: red;
+    color: white;
   }
 
   .button {
