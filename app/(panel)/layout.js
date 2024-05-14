@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
         <Transition>
           <div className='flex'>
             <Sidebar />
-
             {children}
           </div>
         </Transition>
