@@ -69,6 +69,19 @@
     align-items: center;
     gap: 1rem;
   }
+
+  .main-link-hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+  }
+
+  .radius-20 {
+    border-radius: 20px;
+  }
+
+  .bshadow-1 {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
 }
 
 * {

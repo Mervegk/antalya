@@ -1,0 +1,6 @@
+.horizontal-card {
+  min-width: 336px;
+  max-width: 336px;
+  min-height: 160px;
+  border-radius: 20px;
+}
